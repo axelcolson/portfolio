@@ -1,0 +1,112 @@
+/* ******************************* */
+/* BELOW 1008px (tablet) */
+/* ******************************* */
+
+@media (max-width: 63em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ******************************* */
+/* BELOW 840px (smaller tablet) */
+/* ******************************* */
+
+@media (max-width: 52.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .hero-img {
+    width: 40%;
+  }
+
+  .contactTypes {
+    flex-direction: column;
+  }
+
+  .name-section,
+  .email-section {
+    grid-column: 1 / -1;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 1000;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translate(100%, 0);
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    transition: all 0.5s ease-in;
+
+    /* Allows no transitions at all */
+    /* display: none; */
+
+    /* 1) hide it visually */
+    opacity: 0;
+
+    /* 2) Make it inaccessible to mouse & keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+
+    transform: translate(0);
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/* ******************************* */
+/* BELOW 544px (Phones) */
+/* ******************************* */
+
+@media (max-width: 34em) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+  }
+}
