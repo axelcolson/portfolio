@@ -364,7 +364,8 @@ body {
   border-radius: 6px;
   width: 8rem;
   border: 1px solid #eee;
-
+  display: flex;
+  justify-content: center;
   transition: all 0.5s;
 }
 
