@@ -98,6 +98,24 @@
   .main-nav-link:visited {
     font-size: 3rem;
   }
+
+  .item-project {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .img-project {
+    width: 50%;
+    border-radius: 9px;
+  }
+
+  .project-link,
+  .project-link:link,
+  .project-link:visited {
+    grid-column: 1;
+    width: fit-content;
+  }
 }
 
 /* ******************************* */
